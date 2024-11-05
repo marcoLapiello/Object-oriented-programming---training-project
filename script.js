@@ -1,18 +1,10 @@
 let contacts = [];
 
-class Contact {
-  firstName;
-  lastName;
-  constructor(name, surname) {
-    this.firstName = name;
-    this.lastName = surname;
-  }
-}
-
 function addContact() {
   let name = document.getElementById("firstNameInput").value;
   let surname = document.getElementById("lastNameInput").value;
-  let myContact = new Contact(name, surname);
+  let phone = document.getElementById("phoneInput").value;
+  let myContact = new Contact(name, surname, phone);
   contacts.push(myContact);
   console.log(contacts);
   renderContacts();
@@ -33,6 +25,7 @@ function getContactTemplate(contact, index) {
         <div id="contactNr${index}">
             <p>${contact.firstName}</p>
             <p>${contact.lastName}</p>
+            <p>${contact.phone}</p>
         </div>
     `
 }

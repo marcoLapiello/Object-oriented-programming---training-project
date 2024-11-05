@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts book</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="./classes/person.class.js"></script>
+    <script src="./classes/contact.class.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -12,6 +14,7 @@
       <div id="formWrapper">
         <input id="firstNameInput" class="input" type="text" placeholder="Enter your name" />
         <input id="lastNameInput" class="input" type="text" placeholder="Enter your surname" />
+        <input id="phoneInput" class="input" type="tel" placeholder="Enter your phone number" />
         <button onclick="addContact()" id="addContactBtn">Add Contact</button>
       </div>
 
