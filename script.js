@@ -1,31 +1,15 @@
 let contacts = [];
 
-function addContact() {
-  let name = document.getElementById("firstNameInput").value;
-  let surname = document.getElementById("lastNameInput").value;
-  let phone = document.getElementById("phoneInput").value;
-  let myContact = new Contact(name, surname, phone);
-  contacts.push(myContact);
-  console.log(contacts);
-  renderContacts();
+class Contact {
+    firstName;
+    lastName
 }
 
-function renderContacts (){
-    let contact = "";
-    let contentRef = document.getElementById("contactsContainer");
-    contentRef.innerHTML = "";
-    for (let index = 0; index < contacts.length; index++) {
-        contact = contacts[index];
-        contentRef.innerHTML += getContactTemplate(contact, index);
-    }
-}
-
-function getContactTemplate(contact, index) {
-    return /*html*/`
-        <div id="contactNr${index}">
-            <p>${contact.firstName}</p>
-            <p>${contact.lastName}</p>
-            <p>${contact.phone}</p>
-        </div>
-    `
+function addContact(firstName, lastName){
+    let myContact = new Contact();
+    myContact['firstName'] = document.getElementById("firstNameInput").value
+    myContact['lastName'] = document.getElementById("lastNameInput").value
+    contacts.push(myContact);
+    console.log(contacts);
+    
 }
