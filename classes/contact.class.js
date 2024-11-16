@@ -4,5 +4,10 @@ class Contact extends Person {
   constructor(firstName, lastName, phone) {
     super(firstName, lastName);
     this.phone = phone;
+    this.testFunk();
+  }
+
+  testFunk() {
+    
   }
 }
