@@ -5,10 +5,15 @@ class Contact extends Person {
     super(firstName, lastName);
     this.phone = phone;
     this.testFunk();
+    this.funkTest();
   }
 
   testFunk() {
     let testVar = 2;
     console.log(testVar);
+  }
+
+  funkTest(){
+    
   }
 }
