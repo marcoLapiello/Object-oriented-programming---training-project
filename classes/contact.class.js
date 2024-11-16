@@ -8,6 +8,7 @@ class Contact extends Person {
   }
 
   testFunk() {
-    
+    let testVar = 2;
+    console.log(testVar);
   }
 }
